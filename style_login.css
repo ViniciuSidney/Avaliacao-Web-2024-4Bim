@@ -33,4 +33,23 @@ input[type=button], input[type=submit], input[type=reset] {
   cursor: pointer;
 	border: 2px solid rgb(66, 66, 66);;
 	border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+input[type=reset]:hover {
+  color: rgb(58, 0, 0);
+
+  background-color: rgb(206, 40, 40);
+  border: 2px solid rgb(102, 20, 20);
+
+  font-weight: 700;
+}
+
+input[type=submit]:hover {
+  color: rgb(0, 54, 24);
+
+  background-color: rgb(9, 226, 107);
+  border: 2px solid rgb(23, 109, 62);
+
+  font-weight: 700;
 }

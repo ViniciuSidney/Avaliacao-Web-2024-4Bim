@@ -1,0 +1,33 @@
+
+#exit{
+  color: rgb(206, 40, 40);
+}
+
+#button-exit{
+  padding: 10px 30px;
+	margin: 8px 0;
+	box-sizing: border-box;
+
+	font-family: "JetBrains Mono";
+
+  color: rgb(0, 0, 0);
+  border: 3px solid rgb(66, 66, 66);
+
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#button-exit:hover {
+  color: rgb(58, 0, 0);
+
+  background-color: rgb(206, 40, 40);
+  border: 3px solid rgb(102, 20, 20);
+
+  font-weight: 700;
+}
+
+#list-themes li{
+  padding: 1% 0;
+}
