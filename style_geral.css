@@ -58,6 +58,10 @@ footer{
   padding: 2% 0;
 }
 
+#span-footer{
+  font-size: small;
+}
+
 #title-main{
   margin: 2% 0;
 }
