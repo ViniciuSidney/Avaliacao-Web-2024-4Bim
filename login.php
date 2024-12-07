@@ -20,24 +20,27 @@
     <nav class="main-frame">
       <ul id="nav-links">
         <li><a href="index.html" id="nav-link-1" class="nav-link link">Página Inicial</a></li>
-        <li><a href="login.html" id="nav-link-2" class="nav-link link link-active">Login</a></li>
-        <li><a href="perfil.html" id="nav-link-3" class="nav-link link">Perfil</a></li>
+        <li><a href="login.php" id="nav-link-2" class="nav-link link link-active">Login</a></li>
+        <li><a href="perfil.php" id="nav-link-3" class="nav-link link">Perfil</a></li>
       </ul>
     </nav>
     <main class="main-frame">
       <h2>Faça Login Aqui:</h2>
       <br>
-      <form>
+      <form action="perfil.php" method="POST" onsubmit="return login()">
         <label for="name">Usuário:</label><br>
-        <input type="text" id="name" name="name" size="16" maxlength="16" placeholder="Seu usuário" pattern="[A-Za-z]" title="Apenas letras!" autofocus required>
+        <input type="text" id="name" name="name" size="16" maxlength="16" placeholder="Seu usuário" title="Apenas letras!" autofocus required>
         <br>
         <label for="pwd">Senha:</label><br>
         <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Sua senha" title="É necessário ter pelo menos 8 caracteres" required>
         <br>
         <input type="reset" value="Resetar">
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" >
+        <br>
+        <p id="p-message"></p>
       </form>
     </main>
+
     <footer class="main-frame">
       <p id="p-footer">
         Feito por: <i>Vinícius Augusto</i> e <i>Gabriel Felipe</i><br>
@@ -45,4 +48,5 @@
       </p>
     </footer>
   </body>
+  <script src="script_login.js"></script>
 </html>

@@ -20,14 +20,21 @@
     <nav class="main-frame">
       <ul id="nav-links">
         <li><a href="index.html" id="nav-link-1" class="nav-link link">Página Inicial</a></li>
-        <li><a href="login.html" id="nav-link-2" class="nav-link link">Login</a></li>
-        <li><a href="perfil.html" id="nav-link-3" class="nav-link link link-active">Perfil</a></li>
+        <li><a href="login.php" id="nav-link-2" class="nav-link link">Login</a></li>
+        <li><a href="perfil.php" id="nav-link-3" class="nav-link link link-active">Perfil</a></li>
       </ul>
     </nav>
     <main class="main-frame">
       <h2>Seu Perfil:</h2>
       <br>
-      <h3>Bem Vindo, <u>[Nome do Usuário]</u>!</h3>
+      <?php
+        if (isset($_POST['name'])){
+          echo "<h3>Bem Vindo, <u>".$_POST['name']."</u>!</h3>";
+        }else{
+          echo "<h3>Logue para entrar no seu perfil!</h3>";
+        }
+      ?>
+      
       <br>
       <h3>Abaixo Temos uma Lista de Temas Recomendados para Você!</h3>
       <br>
@@ -39,13 +46,17 @@
       <br>
       <h3>Caso Queira <span id="exit">Sair</span> de Sua Conta, Clique no Botão Abaixo!</h3>
       <br>
-      <button type="button" id="button-exit">Sair</button>
+      <button type="button" id="button-exit" onclick="sair()">Sair</button>
     </main>
+
+
+
     <footer class="main-frame">
       <p id="p-footer">
         Feito por: <i>Vinícius Augusto</i> e <i>Gabriel Felipe</i><br>
         <span id="span-footer">Site Desenvolvido para <strong>Avaliação</strong> da Matéria de <strong>Aplicações Para Web</strong> do 4° Bimestre do Ano de <strong>2024</strong></span>
       </p>
     </footer>
+    <script src="script_perfil.js"></script>
   </body>
 </html>
